@@ -1,0 +1,93 @@
+/* ## Colors
+
+### Primary
+
+- Red: hsl(0, 78%, 62%)
+- Cyan: hsl(180, 62%, 55%)
+- Orange: hsl(34, 97%, 64%)
+- Blue: hsl(212, 86%, 64%)
+
+### Neutral
+
+- Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%) */
+
+/* ------Global--------------------------- */
+body {
+  background: hsl(0, 0%, 98%);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  color: hsl(229, 6%, 66%);
+}
+
+/* ------Header------------------------------ */
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 37px;
+  font-weight: 200;
+  margin: 50px 0 0 0;
+}
+
+header h2 {
+  font-size: 37px;
+  font-weight: 600;
+  margin: 0 0 15px;
+  line-height: 1;
+  color: hsl(234, 12%, 34%);
+}
+
+header p {
+  margin: 0 0 30px 0;
+}
+
+/* ------Cards-------------------------------- */
+.cards {
+  position: relative;
+  width: 340px;
+  height: 220px;
+  margin: 75px 0 100px 100px;
+  padding: 10px;
+  border-top: 5px solid;
+  border-radius: 5px;
+  box-shadow: 1px 8px 20px 1px rgba(0, 0, 120, 0.12);
+
+}
+
+.cards h3 {
+  font-size: 20px;
+  color: hsl(234, 12%, 34%);
+  margin: 0 0 10px;
+}
+
+.cards p {
+  margin: 0;
+}
+
+.cards img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+}
+.supervisor {
+  border-color: hsl(180, 62%, 55%);
+}
+
+.team {
+  border-color: hsl(0, 78%, 62%);
+}
+
+.karma {
+  border-color: hsl(34, 97%, 64%);
+}
+
+.calc {
+  border-color: hsl(212, 86%, 64%);
+}
+
+
