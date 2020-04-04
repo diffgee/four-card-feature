@@ -13,13 +13,17 @@
 - Grayish Blue: hsl(229, 6%, 66%)
 - Very Light Gray: hsl(0, 0%, 98%) */
 
-/* card size is 4px border, 350px wide 245px high */
-
 /* ------Global--------------------------- */
 html {
   box-sizing: border-box;
+  min-width: 375px;
 }
+
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: hsl(0, 0%, 98%);
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
@@ -30,19 +34,17 @@ body {
 /* ------Header------------------------------ */
 header {
   text-align: center;
-  max-width: 550px;
-  min-width: 470px;
-  margin: 0 auto;
+  max-width: 312px;
 }
 
 header h1 {
-  font-size: 37px;
+  font-size: 25px;
   font-weight: 200;
   margin: 70px 0 0 0;
 }
 
 header h2 {
-  font-size: 37px;
+  font-size: 25px;
   font-weight: 600;
   margin: 5px 0 18px;
   line-height: 1;
@@ -50,7 +52,7 @@ header h2 {
 }
 
 header p {
-  margin: 0 0 30px 0;
+  margin: 0 0 80px 0;
   font-weight: 400;
   line-height: 1.6;
 }
@@ -58,30 +60,26 @@ header p {
 /* ------Cards-------------------------------- */
 .card-grid {
   display: grid;
-  max-width: 1110px;
-  margin: 60px auto 60px auto;
-  grid-template-columns: 350px 30px 350px 30px 350px;
-  grid-template-rows: 137.5px 107.5px 30px 107.5px 137.5px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 30px;
 }
+
 .cards {
   box-sizing: border-box;
   position: relative;
-  width: 350px;
-  height: 245px;
-  /* margin: 75px 0 100px 100px; */
-  padding: 30px 35px 35px 35px;
+  width: 312px;
+  height: 220px;
+  padding: 25px 23px 35px 35px;
   border-top: 4px solid;
-  border-radius: 4px;
-  /* box-shadow: 1px 8px 20px 1px rgba(0, 0, 120, 0.22); */
+  border-radius: 4px 4px 8px 8px;
   box-shadow: 1px 8px 20px 1px rgba(218, 227, 242, 1);
-
-
+  background: #fff;
 }
 
 .cards h3 {
-  font-size: 20px;
+  font-size: 18px;
   color: hsl(234, 12%, 34%);
-  margin: 0 0 10px;
+  margin: 0 0 5px;
 }
 
 .cards p {
@@ -95,35 +93,79 @@ header p {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 32px;
+  padding: 25px;
+  height: 60px;
+  width: 60px;
 }
+
 .supervisor {
   border-color: hsl(180, 62%, 55%);
-  grid-row-start: 2;
-  grid-row-end: 5;
-  grid-column-start: 1;
 }
 
 .team {
   border-color: hsl(0, 78%, 62%);
-  grid-column-start: 3;
-  grid-column-end: 4;
 }
 
 .karma {
   border-color: hsl(34, 97%, 64%);
-  grid-row-start: 4;
-  grid-row-end: 6;
-  grid-column-start: 3;
-  grid-column-end: 4;
 }
 
 .calc {
   border-color: hsl(212, 86%, 64%);
-  grid-row-start: 2;
-  grid-row-end: 5;
-  grid-column-start: 5;
-  grid-column-end: 6;
 }
 
+/* --------------Media Queries------------------ */
+@media (min-width: 1160px) {
+  header {
+    max-width: 550px;
+    min-width: 470px;
+  }
+  header h1 {
+    font-size: 37px;
+  }
+  
+  header h2 {
+    font-size: 37px;
+  }
+  
+  .card-grid {
+    display: grid;
+    margin: 0 auto 60px auto;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
 
+.supervisor {
+  grid-row: span 2;
+}
+
+.team {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+.karma {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.calc {
+  grid-row: span 2;
+}
+
+.cards {
+  width: 350px;
+  height: 245px;
+  padding: 30px 35px 35px 35px;
+}
+
+.cards h3 {
+  font-size: 20px;
+}
+
+.cards img {
+  height: 64px;
+  width: 64px;
+  padding: 32px;
+}}
