@@ -13,7 +13,12 @@
 - Grayish Blue: hsl(229, 6%, 66%)
 - Very Light Gray: hsl(0, 0%, 98%) */
 
+/* card size is 4px border, 350px wide 245px high */
+
 /* ------Global--------------------------- */
+html {
+  box-sizing: border-box;
+}
 body {
   background: hsl(0, 0%, 98%);
   font-family: 'Poppins', sans-serif;
@@ -25,36 +30,51 @@ body {
 /* ------Header------------------------------ */
 header {
   text-align: center;
+  max-width: 550px;
+  min-width: 470px;
+  margin: 0 auto;
 }
 
 header h1 {
   font-size: 37px;
   font-weight: 200;
-  margin: 50px 0 0 0;
+  margin: 70px 0 0 0;
 }
 
 header h2 {
   font-size: 37px;
   font-weight: 600;
-  margin: 0 0 15px;
+  margin: 5px 0 18px;
   line-height: 1;
   color: hsl(234, 12%, 34%);
 }
 
 header p {
   margin: 0 0 30px 0;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 /* ------Cards-------------------------------- */
+.card-grid {
+  display: grid;
+  max-width: 1110px;
+  margin: 60px auto 60px auto;
+  grid-template-columns: 350px 30px 350px 30px 350px;
+  grid-template-rows: 137.5px 107.5px 30px 107.5px 137.5px;
+}
 .cards {
+  box-sizing: border-box;
   position: relative;
-  width: 340px;
-  height: 220px;
-  margin: 75px 0 100px 100px;
-  padding: 10px;
-  border-top: 5px solid;
-  border-radius: 5px;
-  box-shadow: 1px 8px 20px 1px rgba(0, 0, 120, 0.12);
+  width: 350px;
+  height: 245px;
+  /* margin: 75px 0 100px 100px; */
+  padding: 30px 35px 35px 35px;
+  border-top: 4px solid;
+  border-radius: 4px;
+  /* box-shadow: 1px 8px 20px 1px rgba(0, 0, 120, 0.22); */
+  box-shadow: 1px 8px 20px 1px rgba(218, 227, 242, 1);
+
 
 }
 
@@ -66,28 +86,44 @@ header p {
 
 .cards p {
   margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.8;
 }
 
 .cards img {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 20px;
+  padding: 32px;
 }
 .supervisor {
   border-color: hsl(180, 62%, 55%);
+  grid-row-start: 2;
+  grid-row-end: 5;
+  grid-column-start: 1;
 }
 
 .team {
   border-color: hsl(0, 78%, 62%);
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 
 .karma {
   border-color: hsl(34, 97%, 64%);
+  grid-row-start: 4;
+  grid-row-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 
 .calc {
   border-color: hsl(212, 86%, 64%);
+  grid-row-start: 2;
+  grid-row-end: 5;
+  grid-column-start: 5;
+  grid-column-end: 6;
 }
 
 
